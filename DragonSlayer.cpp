@@ -1,5 +1,6 @@
 #include "DragonSlayer.h"
 #include "Dragon.h"
+#include "Utility.h"
 
 //DragonSlayer::DragonSlayer
 
@@ -7,7 +8,8 @@ DragonSlayer::DragonSlayer(std::string name_, int hp_, int armour_) :
     Character(hp_, armour_, 4),
     name(name_)
 {
-
+    helpfulItems = makeHelpfulItems(5);
+    defensiveItems = makeDefensiveItems(5);
 }
 
 //DragonSlayer::getName
@@ -42,5 +44,5 @@ void DragonSlayer::attack(Character& other)
 
 std::string Dwarf::getStats()
 {
-    
+    return getCharacterStats(this);
 }

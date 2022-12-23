@@ -4,8 +4,8 @@
 
 //DragonSlayer::DragonSlayer
 
-DragonSlayer::DragonSlayer(std::string name_, int hp_, int armour_) :
-    Character(hp_, armour_, 4),
+DragonSlayer::DragonSlayer(std::string name_, int hp_, int armor_) :
+    Character(hp_, armor_, 4),
     name(name_)
 {
     helpfulItems = makeHelpfulItems(5);

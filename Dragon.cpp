@@ -3,6 +3,14 @@
 
 //Dragon::Dragon
 
+Dragon::Dragon(std::string name_, int hp_, int armour_) :
+    Character(hp_, armour_, 80),
+    name(name_)
+{
+
+}
+
+
 void Dragon::attack(Character &other)
 {
     std::cout << name << " is attacking " << other.getName() << "!!!" << std::endl;
@@ -19,4 +27,15 @@ void Dragon::attack(Character &other)
 
 //Dragon::getName
 
+const std::string& Dragon::getName()
+{
+    return name;
+}
+
 //Dragon::getStats
+
+std::string Dragon::getStats()
+{
+    
+}
+

@@ -101,6 +101,7 @@ void Character::attackInternal(Character& other)
         getCharacterReward(*initialHitPoints, hitPoints);
         getCharacterReward(*initialArmorLevel, armor);
         getCharacterReward(*initialAttackDamage, attackDamage);
+    
         
         //assert(false);
         std::cout << getName() << " defeated " << other.getName() << " and leveled up!" << std::endl;        

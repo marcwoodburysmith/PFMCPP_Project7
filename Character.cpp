@@ -114,10 +114,9 @@ void Character::getCharacterReward(int& initial, int& current)
     if( current < initial )
     {
         current = initial;
-        current *= 0.1;
-        initial = current;
     }
-    
+    current *= 0.1;
+    initial = current;
 }
 
 

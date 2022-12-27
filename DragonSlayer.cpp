@@ -36,7 +36,7 @@ void DragonSlayer::attack(Character& other)
         if (attackItem != nullptr)
         {
             attackItem->use(this);
-            //not sure how to reset
+            attackItem.reset();
         }
         
         while( dragon->getHP() > 0 )

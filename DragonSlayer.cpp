@@ -35,10 +35,12 @@ void DragonSlayer::attack(Character& other)
         //if !nullptr and dragon HP > 0 use attack item to boost attack 10x then reset somehow
         if (attackItem != nullptr)
         {
-            attackItem->use(this);
-            attackItem.reset();
+            if( dragon->getHP() > 0 )
+            {
+                attackItem->use(this);
+                attackItem.reset();
+            }
         }
-        
         while( dragon->getHP() > 0 )
         {
             dragon->takeDamage(attackDamage);

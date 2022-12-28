@@ -115,7 +115,7 @@ void Character::getCharacterReward(int& initial, int& current)
     {
         current = initial;
     }
-    current *= 0.1;
+    current *= 1.1;
     initial = current;
 }
 

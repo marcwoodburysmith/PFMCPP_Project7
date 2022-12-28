@@ -32,7 +32,7 @@ struct Character
     int getAttackDamage() const { return attackDamage; }
     bool getIsDefending() const { return isDefending; }
 
-    void getCharacterReward(int& initial, int& current);
+    
     
     const std::vector<std::unique_ptr<Item>>& getHelpfulItems() const { return helpfulItems; }
     const std::vector<std::unique_ptr<Item>>& getDefensiveItems() const { return defensiveItems; }
@@ -67,4 +67,5 @@ private:
     std::unique_ptr<int> initialHitPoints, initialArmorLevel, initialAttackDamage;
     
     void attackInternal(Character& other);
+    void getCharacterReward(int& initial, int& current);
 };
